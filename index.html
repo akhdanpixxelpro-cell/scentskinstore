@@ -825,42 +825,68 @@ img {
     </section>
 
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Testimonials</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled."</p>
-                    <div class="user-profile">
-                        <div class="user-img"></div>
-                        <div>
-                            <strong>Serhiy Hipskyy</strong><br><small>CEO Universal</small>
-                        </div>
+    <div class="container">
+        <h2 class="section-title" style="text-align: center;">Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled."</p>
+                <div class="user-profile">
+                    <div class="user-img">
+                        <img src="img/pp2.jpg" alt="Serhiy Hipskyy">
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod."</p>
-                    <div class="user-profile">
-                        <div class="user-img"></div>
-                        <div>
-                            <strong>Justus Menke</strong><br><small>CEO Universal</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."</p>
-                    <div class="user-profile">
-                        <div class="user-img"></div>
-                        <div>
-                            <strong>Britain Eriksen</strong><br><small>CEO Universal</small>
-                        </div>
+                    <div>
+                        <strong>Serhiy Hipskyy</strong><br><small>CEO Universal</small>
                     </div>
                 </div>
             </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod."</p>
+                <div class="user-profile">
+                    <div class="user-img">
+                        <img src="img/pp3.jpg" alt="Justus Menke">
+                    </div>
+                    <div>
+                        <strong>Justus Menke</strong><br><small>CEO Universal</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."</p>
+                <div class="user-profile">
+                    <div class="user-img">
+                        <img src="img/pp4.jpg" alt="Britain Eriksen">
+                    </div>
+                    <div>
+                        <strong>Britain Eriksen</strong><br><small>CEO Universal</small>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+</style>
 
     <section class="faq">
         <div class="container faq-container">
@@ -896,21 +922,21 @@ img {
 
         <div class="blog-grid">
             <div class="blog-card">
-                <img src="https://placehold.co/400x250/ddd/333?text=Blog+1" alt="Blog 1">
+                <img src="img/blog1.jpg" alt="Blog 1">
                 <h3>To be our partner</h3>
                 <p>The company's products are made with plant-based essential oil, beneficial for your skin.</p>
                 <a href="a7.html" class="btn-continue">Continue</a>
             </div>
 
             <div class="blog-card">
-                <img src="https://placehold.co/400x250/ddd/333?text=Blog+2" alt="Blog 2">
+                <img src="img/blog2.jpg" alt="Blog 2">
                 <h3>For best results work</h3>
                 <p>Classic form, restricted monochromatic palette, and botanical illustrations.</p>
                 <a href="a8.html" class="btn-continue">Continue</a>
             </div>
 
             <div class="blog-card">
-                <img src="https://placehold.co/400x250/ddd/333?text=Blog+3" alt="Blog 3">
+                <img src="img/blog3.jpg" alt="Blog 3">
                 <h3>Awesome tips</h3>
                 <p>Beneficial for your skin. Scents are integral to your personal mood and well-being.</p>
                 <a href="a9.html" class="btn-continue">Continue</a>
@@ -946,6 +972,13 @@ img {
     background: #111;
     color: #fff;
 }
+.blog-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
 </style>
 
     <section class="newsletter">
