@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packaging - Essentia Scent Store</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #4a4a4a;
+            --accent-bg: #f4f1ee;
+            --footer-bg: #f5f5f5;
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); color: var(--secondary-color); background-color: var(--white); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- NAVBAR --- */
+        header { padding: 20px 0; position: sticky; top: 0; background: var(--white); z-index: 1000; border-bottom: 1px solid #eee; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 0.9rem; color: #666; }
+        .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+
+        /* --- PACKAGING HERO --- */
+        .pack-hero { padding: 100px 0; background-color: var(--accent-bg); text-align: center; }
+        .pack-hero h1 { font-family: var(--font-serif); font-size: 3.5rem; margin-bottom: 20px; color: var(--primary-color); }
+        .pack-hero p { max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #666; }
+
+        /* --- DETAIL SECTION --- */
+        .pack-detail { padding: 80px 0; }
+        .pack-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .pack-row.reverse { direction: rtl; }
+        .pack-row.reverse .pack-text { direction: ltr; }
+
+        .pack-image { background: #f9f9f9; padding: 40px; border-radius: 4px; }
+        .pack-image img { width: 100%; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        .pack-text h2 { font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 20px; color: var(--primary-color); }
+        .pack-text p { margin-bottom: 20px; color: #777; font-size: 1rem; }
+        
+        /* --- MATERIAL LIST --- */
+        .materials { padding: 80px 0; background-color: #fafafa; text-align: center; }
+        .material-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+        .mat-item h3 { margin-bottom: 15px; font-size: 1.2rem; font-family: var(--font-serif); }
+        .mat-item p { font-size: 0.9rem; color: #888; }
+
+        /* --- FOOTER (ABU-ABU) --- */
+        footer { padding: 80px 0 30px; background-color: var(--footer-bg); border-top: 1px solid #e0e0e0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 25px; color: var(--primary-color); }
+        .footer-col ul li { margin-bottom: 12px; font-size: 0.85rem; color: #666; }
+        .copyright { text-align: center; font-size: 0.8rem; color: #999; padding-top: 30px; border-top: 1px solid #e0e0e0; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .pack-hero h1 { font-size: 2.5rem; }
+            .pack-row { grid-template-columns: 1fr; gap: 30px; }
+            .pack-row.reverse { direction: ltr; }
+            .material-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        /* ===============================
+   GLOBAL ANTI GOYANG (MOBILE)
+   =============================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Pastikan semua elemen aman */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===============================
+   NAVBAR MOBILE STABLE FIX
+   =============================== */
+
+header {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: relative;
+}
+
+/* Menu icon */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide desktop menu */
+    .nav-links {
+        display: none;
+    }
+
+    /* Mobile menu container */
+    nav {
+        position: fixed;              /* ⬅️ PENTING: ganti absolute → fixed */
+        top: 64px;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        transform: translateY(-120%);
+        transition: transform 0.25s ease;
+        z-index: 1000;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .nav-links li a {
+        padding: 12px 0;
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+
+    
+
+   <header>
+    <div class="container navbar">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <div class="logo">SCENT STORE</div>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Shops</a></li>
+                <li><a href="#">The Process</a></li>
+                <li><a href="#">Packaging</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* DEFAULT (DESKTOP) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+    }
+}
+/* ===============================
+   GLOBAL ANTI GOYANG
+   =============================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   NAVBAR DESKTOP (DEFAULT)
+   =============================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===============================
+   NAVBAR MOBILE
+   =============================== */
+@media (max-width: 768px) {
+
+    /* Show burger */
+    .menu-toggle {
+        display: block;
+        z-index: 2000;
+    }
+
+    /* Hide desktop menu */
+    .nav-links {
+        display: none;
+    }
+
+    /* Mobile menu container */
+    nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        transform: translateY(-120%);
+        transition: transform 0.3s ease;
+        z-index: 1500;
+    }
+
+    /* Active state */
+    nav.active {
+        transform: translateY(0);
+    }
+
+    /* Mobile menu list */
+    nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    nav .nav-links a {
+        display: block;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+}
+
+</style>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+
+    // Lock body scroll when menu open
+    document.body.style.overflow =
+        navMenu.classList.contains('active') ? 'hidden' : '';
+});
+</script>
+
+
+    <section class="pack-hero">
+        <div class="container">
+            <h1>Thoughtful Packaging</h1>
+            <p>At Essentia, we believe that the experience begins long before you smell the scent. Our packaging is a blend of minimal aesthetics and environmental responsibility.</p>
+        </div>
+    </section>
+
+    <section class="container pack-detail">
+        <div class="pack-row">
+            <div class="pack-image">
+                <img src="https://placehold.co/600x450/333/fff?text=The+Classic+Box" alt="The Classic Box">
+            </div>
+            <div class="pack-text">
+                <h2>The Classic Box</h2>
+                <p>Designed with a restricted monochromatic palette, our signature boxes are inspired by botanical illustrations and classic typography.</p>
+                <p>Every box is made from 100% recycled paper, ensuring that beauty doesn't come at the cost of nature.</p>
+            </div>
+        </div>
+
+        <div class="pack-row reverse">
+            <div class="pack-image">
+                <img src="https://placehold.co/600x450/e0e0e0/333?text=Glass+Vials" alt="Glass Vials">
+            </div>
+            <div class="pack-text">
+                <h2>Amber Glass Vials</h2>
+                <p>We use high-quality amber glass to protect our plant-based essential oils from UV light, preserving the potency and longevity of your scent.</p>
+                <p>Once empty, these vials are designed to be reused as mini vases or recycled infinitely.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem;">Sustainability Matters</h2>
+            <div class="material-grid">
+                <div class="mat-item">
+                    <h3>Recycled Paper</h3>
+                    <p>FSC-certified paper sourced from responsibly managed forests.</p>
+                </div>
+                <div class="mat-item">
+                    <h3>Soy-Based Ink</h3>
+                    <p>Biodegradable inks that are safer for the environment during recycling.</p>
+                </div>
+                <div class="mat-item">
+                    <h3>No Plastic</h3>
+                    <p>We use paper-based tape and honeycomb wrap instead of bubble wrap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">SCENT STORE</div>
+                    <p style="font-size: 0.85rem; color: #777;">Elevating your sensory experience through sustainable design and natural essence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>On Our Site</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pronduk.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="packing.html">Packaging</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Location</h4>
+                    <ul>
+                        <li>scentstore.com</li>
+                        <li>Los Angeles, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Scent Store. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

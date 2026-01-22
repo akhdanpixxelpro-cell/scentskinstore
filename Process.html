@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Process - Essentia Scent Store</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #4a4a4a;
+            --accent-bg: #f4f1ee;
+            --footer-bg: #f5f5f5;
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); color: var(--secondary-color); background-color: var(--white); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- NAVBAR --- */
+        header { padding: 20px 0; position: sticky; top: 0; background: var(--white); z-index: 1000; border-bottom: 1px solid #eee; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 0.9rem; color: #666; }
+        .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+
+        /* --- PROCESS HERO --- */
+        .process-hero { padding: 100px 0; text-align: center; background-color: #fff; }
+        .process-hero h1 { font-family: var(--font-serif); font-size: 3.5rem; margin-bottom: 20px; color: var(--primary-color); }
+        .process-hero p { max-width: 650px; margin: 0 auto; color: #777; font-size: 1.1rem; }
+
+        /* --- TIMELINE STEPS --- */
+        .timeline { padding: 60px 0; position: relative; }
+        
+        .step { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 100px; }
+        .step:nth-child(even) { direction: rtl; }
+        .step:nth-child(even) .step-text { direction: ltr; }
+
+        .step-number { font-family: var(--font-serif); font-size: 5rem; color: #ebebeb; line-height: 1; margin-bottom: 10px; display: block; }
+        .step-text h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px; }
+        .step-text p { color: #666; margin-bottom: 15px; }
+
+        .step-img { background: var(--accent-bg); padding: 20px; border-radius: 4px; }
+        .step-img img { width: 100%; display: block; filter: grayscale(20%); }
+
+        /* --- QUOTE SECTION --- */
+        .quote-sec { padding: 100px 0; background-color: var(--accent-bg); text-align: center; margin: 40px 0; }
+        .quote-sec blockquote { font-family: var(--font-serif); font-size: 1.8rem; font-style: italic; max-width: 800px; margin: 0 auto; color: var(--primary-color); }
+        .quote-sec cite { display: block; margin-top: 20px; font-style: normal; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #888; }
+
+        /* --- FOOTER (ABU-ABU) --- */
+        footer { padding: 80px 0 30px; background-color: var(--footer-bg); border-top: 1px solid #e0e0e0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 25px; color: var(--primary-color); }
+        .footer-col ul li { margin-bottom: 12px; font-size: 0.85rem; color: #666; }
+        .copyright { text-align: center; font-size: 0.8rem; color: #999; padding-top: 30px; border-top: 1px solid #e0e0e0; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .step { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .step:nth-child(even) { direction: ltr; }
+            .process-hero h1 { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="container navbar">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <div class="logo">SCENT STORE</div>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Shops</a></li>
+                <li><a href="#">The Process</a></li>
+                <li><a href="#">Packaging</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* DEFAULT (DESKTOP) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+    }
+}
+
+</style>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+    <section class="process-hero">
+        <div class="container">
+            <h1>Crafted by Nature</h1>
+            <p>Transparency is at the heart of everything we do. From the first sprout to the final bottle, discover how we create our signature scents.</p>
+        </div>
+    </section>
+
+    <section class="container timeline">
+        
+        <div class="step">
+            <div class="step-text">
+                <span class="step-number">01</span>
+                <h2>Sourcing Ingredients</h2>
+                <p>We travel to small, sustainable farms around the globe to source the highest quality botanical ingredients. No synthetic fertilizers, just pure nature.</p>
+                <p>Our commitment to organic farming ensures that every drop of essential oil is as potent as the plant it came from.</p>
+            </div>
+            <div class="step-img">
+                <img src="https://placehold.co/600x400/333/fff?text=Ingredient+Sourcing" alt="Sourcing">
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-text">
+                <span class="step-number">02</span>
+                <h2>Cold-Press Distillation</h2>
+                <p>To preserve the delicate aromatic compounds, we use slow, cold-press distillation techniques. This process takes longer but results in a cleaner, more vibrant scent.</p>
+                <p>Unlike heat-based methods, our process keeps the therapeutic benefits of the plants intact.</p>
+            </div>
+            <div class="step-img">
+                <img src="https://placehold.co/600x400/e0e0e0/333?text=Cold-Press+Method" alt="Distillation">
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-text">
+                <span class="step-number">03</span>
+                <h2>Small Batch Blending</h2>
+                <p>We don't believe in mass production. Every bottle of Essentia is blended in small batches in our Los Angeles studio to ensure absolute precision.</p>
+                <p>Each batch is tested for clarity, scent profile, and skin-safety before it ever reaches our shelves.</p>
+            </div>
+            <div class="step-img">
+                <img src="https://placehold.co/600x400/333/fff?text=Hand-Blended" alt="Blending">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="quote-sec">
+        <div class="container">
+            
+
+[Image of a distillation process diagram for essential oils]
+
+            <br>
+            <blockquote>"The art of scent-making is about patience. You cannot rush what nature has taken months to grow."</blockquote>
+            <cite>— Sarah Jenkins, Master Perfumer</cite>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">SCENT STORE</div>
+                    <p style="font-size: 0.85rem; color: #777;">Crafting sustainable, plant-based scents for the modern minimalist.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>On Our Site</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pronduk.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="packing.html">Packaging</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Scent Store. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

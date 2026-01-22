@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentia Scent Store</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- SEO META -->
+<meta name="description" content="Essentia Scent Store menghadirkan body scent berbahan essential oil alami, ramah kulit, dengan aroma premium yang terinspirasi dari kesederhanaan alam.">
+<meta name="keywords" content="body scent, parfum alami, essential oil, scented body care, Essentia Scent Store">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Essentia Scent Store">
+<meta name="theme-color" content="#1a1a1a">
+
+<link rel="canonical" href="https://www.scentstore.com/">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Essentia Scent Store – Natural Body Scent Premium">
+<meta property="og:description" content="Body scent berbahan essential oil alami yang menyatu dengan kesederhanaan alam. Premium, aman untuk kulit, dan tahan lama.">
+<meta property="og:url" content="https://www.scentstore.com/">
+<meta property="og:image" content="https://www.scentstore.com/img/skin1.jpg">
+<meta property="og:site_name" content="Essentia Scent Store">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Essentia Scent Store – Natural Body Scent">
+<meta name="twitter:description" content="Body scent natural berbasis essential oil, aman untuk kulit dan mencerminkan gaya hidup modern.">
+<meta name="twitter:image" content="https://www.scentstore.com/img/skin1.jpg">
+
+<meta name="google-site-verification" content="your-code-here">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+
+<!-- PERFORMANCE HINTS -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --primary-color: #1a1a1a; /* Hitam/Dark Grey */
+            --secondary-color: #4a4a4a; /* Abu-abu teks */
+            --accent-bg: #f4f1ee; /* Beige background */
+            --white: #ffffff;
+            --button-color: #3e3030; /* Coklat Gelap */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--secondary-color);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--button-color);
+            color: var(--white);
+            padding: 12px 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Mobile Menu Toggle (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--accent-bg);
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text h4 {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* --- STATS / TRUST --- */
+        .stats {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            font-family: var(--font-sans);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* --- BENEFITS / SERVICES --- */
+        .benefits {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-item i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-family: var(--font-sans);
+        }
+
+        .benefit-item p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* --- BEST SELLING PRODUCTS --- */
+        .products {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-img {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .product-card:hover .product-img {
+            background-color: #f0f0f0;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-family: var(--font-sans);
+        }
+
+        .product-card p {
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            background: #333;
+            color: #fff;
+            font-size: 0.75rem;
+        }
+
+        /* --- FEATURE SECTION (About/Mood) --- */
+        .feature {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .feature-img {
+            background-color: #1a1a1a; /* Dark box like in image */
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #fcfcfc;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .stars {
+            color: #cda45e; /* Gold color */
+            margin-bottom: 15px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .user-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+
+        /* --- FAQ --- */
+        .faq {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        details {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        summary {
+            font-family: var(--font-sans);
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        summary::after {
+            content: '+'; 
+            font-weight: bold;
+        }
+        
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- PARTNERS --- */
+        .partners {
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .partners-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            opacity: 0.6;
+            filter: grayscale(100%);
+        }
+
+        /* --- BLOG --- */
+        .blog {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .blog-card {
+            text-align: left;
+        }
+
+        .blog-card img {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-family: var(--font-sans);
+        }
+
+        .blog-card p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* --- NEWSLETTER --- */
+        .newsletter {
+            padding: 60px 0;
+            background-color: #fff;
+            margin-bottom: 40px;
+        }
+        
+        .newsletter-box {
+            background: #fafafa;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-right: none;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background: var(--button-color);
+            color: #fff;
+            border: none;
+            padding: 0 30px;
+            cursor: pointer;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 0 20px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: var(--font-sans);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #aaa;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* --- MEDIA QUERIES (RESPONSIVE MOBILE) --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide menu on mobile for simplicity */
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .benefits-grid, .product-grid, .testimonial-grid, .blog-grid, .footer-grid {
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+            }
+
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-content {
+                order: 2; /* Put text below image on mobile */
+            }
+            .feature-img {
+                order: 1;
+            }
+
+            .newsletter-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .newsletter-form {
+                width: 100%;
+            }
+        }
+        /* ===============================
+   MOBILE NO-SHAKE / NO-OVERFLOW FIX
+   =============================== */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent any element from exceeding viewport */
+* {
+    box-sizing: border-box;
+}
+
+/* Images never overflow */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix grid & flex overflow on mobile */
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 100%;
+    }
+
+    .hero-content,
+    .benefits-grid,
+    .product-grid,
+    .testimonial-grid,
+    .blog-grid,
+    .footer-grid,
+    .feature-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    /* Hero image stability */
+    .hero-image {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Newsletter & forms */
+    .newsletter-box,
+    .newsletter-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input, button {
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="container navbar">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <div class="logo">SCENT STORE</div>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pronduk.html">Our Shops</a></li>
+                <li><a href="Process.html">The Process</a></li>
+                <li><a href="packing.html">Packaging</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* DEFAULT (DESKTOP) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+    }
+}
+
+</style>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h4>Body Scent</h4>
+                <h1>ESSENTIA</h1>
+                <p>Essentia is a new body scent brand that praises simplicity in nature. The company's products are made with plant-based essential oil, beneficial for your skin.</p>
+                <a href="pronduk.html" class="btn">View Details</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/skin1.jpg" alt="Essentia Product">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-text">
+                <h3>Trusted by over 350,000+ Clients</h3>
+                <p>Worldwide since 2008</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.6 ★★★★★</h3>
+                <p>3,250 Ratings</p>
+            </div>
+            <div class="stat-item">
+                <h3>6M+</h3>
+                <p>Worldwide Product Sales</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits Using Our Services</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i>⚙️</i>
+                    <h3>Best Quality</h3>
+                    <p>Mean if he they been no hold do. Is at much do made took held help.</p>
+                </div>
+                <div class="benefit-item">
+                    <i>🚚</i>
+                    <h3>Free Shipping</h3>
+                    <p>At much do made took held help. Letter person am secure of estate genius at.</p>
+                </div>
+                <div class="benefit-item">
+                    <i>🛡️</i>
+                    <h3>Warranty</h3>
+                    <p>Delay music in lived noise an. Beyond genius really enough passed is up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Best Selling</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/Cherry Blossom.jpg" alt="Product 1">
+                    </div>
+                    <h3>Cherry Blossom</h3>
+                    <p>Blessing watershed ladybug she met honoured for breeding.</p>
+                    <a href="#" class="btn-small">Buy Now | $35.99</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/Citrus.jpg" alt="Product 2">
+                    </div>
+                    <h3>Citrus</h3>
+                    <p>In built table in an rapid blush. Merits behind warmly.</p>
+                    <a href="#" class="btn-small">Buy Now | $39.99</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/Vanilla Coffee.jpg" alt="Product 3">
+                    </div>
+                    <h3>Vanilla Coffee</h3>
+                    <p>Vicinity relation sensible sociable surprise screened as.</p>
+                    <a href="#" class="btn-small">Buy Now | $30.99</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="container feature-container">
+            <div class="feature-content">
+                <h2 class="section-title" style="text-align: left;">Scents are integral to your personal mood</h2>
+                <p>They hold a unique power to instantly transport you back in time and bring back memories. The packaging design combines clean, classic form, restricted monochromatic palette.</p>
+                <br>
+                <a href="buy.html" class="btn">Buy Now</a>
+            </div>
+            <div class="feature-img">
+                <img src="img/skin2.jpg" alt="Feature Product">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled."</p>
+                    <div class="user-profile">
+                        <div class="user-img"></div>
+                        <div>
+                            <strong>Serhiy Hipskyy</strong><br><small>CEO Universal</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod."</p>
+                    <div class="user-profile">
+                        <div class="user-img"></div>
+                        <div>
+                            <strong>Justus Menke</strong><br><small>CEO Universal</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."</p>
+                    <div class="user-profile">
+                        <div class="user-img"></div>
+                        <div>
+                            <strong>Britain Eriksen</strong><br><small>CEO Universal</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container faq-container">
+            <h2 class="section-title">Frequently Ask Questions</h2>
+            <details>
+                <summary>How long until we deliver your first order?</summary>
+                <p>It usually takes 2-3 business days for standard shipping.</p>
+            </details>
+            <details>
+                <summary>What is the return policy?</summary>
+                <p>You can return the product within 30 days if it is unopened.</p>
+            </details>
+            <details>
+                <summary>Do you ship internationally?</summary>
+                <p>Yes, we ship to over 100 countries worldwide.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container partners-row">
+            <h3>AfterPay</h3>
+            <h3>unicef</h3>
+            <h3>FirstHealth</h3>
+            <h3>Interneuron</h3>
+            <h3>LOVATO</h3>
+        </div>
+    </section>
+
+    <section class="blog">
+    <div class="container">
+        <h2 class="section-title">Our latest blog</h2>
+
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="https://placehold.co/400x250/ddd/333?text=Blog+1" alt="Blog 1">
+                <h3>To be our partner</h3>
+                <p>The company's products are made with plant-based essential oil, beneficial for your skin.</p>
+                <a href="a7.html" class="btn-continue">Continue</a>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://placehold.co/400x250/ddd/333?text=Blog+2" alt="Blog 2">
+                <h3>For best results work</h3>
+                <p>Classic form, restricted monochromatic palette, and botanical illustrations.</p>
+                <a href="a8.html" class="btn-continue">Continue</a>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://placehold.co/400x250/ddd/333?text=Blog+3" alt="Blog 3">
+                <h3>Awesome tips</h3>
+                <p>Beneficial for your skin. Scents are integral to your personal mood and well-being.</p>
+                <a href="a9.html" class="btn-continue">Continue</a>
+            </div>
+        </div>
+
+        <!-- tombol bawah -->
+        <div class="blog-footer">
+            <a href="blog.html" class="btn-more-blog">Continue Blog Lainnya</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog-footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn-more-blog {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: transparent;
+    border: 2px solid #111;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-more-blog:hover {
+    background: #111;
+    color: #fff;
+}
+</style>
+
+    <section class="newsletter">
+        <div class="container newsletter-box">
+            <h3>Subscribe to Get Special Price</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">SCENT STORE</div>
+                    <p style="font-size: 0.85rem; color: #777;">The contrast between those elements creates a highly recognizable and modern look.</p>
+                    <div class="social-icons">
+                        <a href="#">📷</a> <a href="#">📘</a> <a href="#">🐦</a> <a href="#">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>On Our Site</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pronduk.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="packing.html">Packaging</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">scentstore.com</a></li>
+                        <li><a href="#">+1 650-555-0123</a></li>
+                        <li><a href="#">Los Angeles, CA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Scent Store. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <div class="fab-container">
+
+    <!-- BACK TO TOP -->
+    <div class="fab-btn fab-top" id="backToTop" onclick="backToTop()">
+        <!-- SVG PANAH -->
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="white" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+        </svg>
+    </div>
+
+    <!-- WHATSAPP -->
+     <div class="fab-btn fab-wa">
+    <!-- SVG DI SINI -->
+   
+
+<a href="https://wa.me/628123456789?text=Halo%20saya%20ingin%20bertanya"
+   target="_blank"
+   rel="noopener"
+   class="fab-btn fab-wa">
+<svg viewBox="0 0 512 512" width="28" height="28" aria-hidden="true" focusable="false">
+    <path fill="#FFFFFF" d="M256 32C132.3 32 32 128.9 32 248c0 50.6 18.1 97.3 48.3 134.2L48 480l101.6-30.1c33.4 18.3 71.8 28.7 112.4 28.7 123.7 0 224-96.9 224-216.6S379.7 32 256 32z"/>
+    <path fill="#25D366" d="M256 64c-105.9 0-192 83.6-192 184 0 46.3 18.2 89.4 48.4 121.6L96 416l50.5-14.7C177.6 420.8 215.8 432 256 432c105.9 0 192-83.6 192-184S361.9 64 256 64z"/>
+    <path fill="#FFFFFF" d="M341.6 299.2c-5.2-2.6-30.6-15-35.3-16.7-4.7-1.7-8.1-2.6-11.5 2.6-3.4 5.2-13.3 16.7-16.3 20.1-3 3.4-6 3.9-11.2 1.3-30.6-15-50.6-26.8-70.7-60.8-5.2-8.9 5.2-8.3 15-28.2 1.7-3.4.9-6.5-.4-9.1-1.3-2.6-11.5-27.4-15.8-37.6-4.3-10.4-8.7-9.1-11.5-9.1-3 0-6.5-.4-10-.4s-9.1 1.3-13.9 6.5c-4.8 5.2-18.3 17.9-18.3 43.7s18.7 50.8 21.3 54.2c2.6 3.4 36.9 56.3 89.5 78.9 12.5 5.4 22.3 8.6 29.9 11 12.6 4 24.1 3.4 33.2 2.1 10.1-1.5 30.6-12.5 34.9-24.6 4.3-12.1 4.3-22.5 3-24.6-1.3-2.1-4.7-3.4-9.9-6z"/>
+  </svg>
+  <!-- Text tersembunyi untuk Screen Reader (WAJIB untuk Lighthouse) -->
+  <span class="sr-only">Chat WhatsApp Outbound Pantai</span>
+</a>
+</div>
+
+</div>
+
+<style>
+  .fab-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.fab-btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.fab-btn:hover {
+    transform: scale(1.1);
+}
+
+.fab-wa {
+    background: #25D366;
+}
+
+/* ukuran ikon svg */
+.fab-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.fab-top {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fab-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+</style>
+
+<script>
+const topBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        topBtn.classList.add("show");
+    } else {
+        topBtn.classList.remove("show");
+    }
+});
+
+function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>

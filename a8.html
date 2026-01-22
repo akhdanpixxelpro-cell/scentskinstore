@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Power of Plant-Based Oils - Essentia Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #4a4a4a;
+            --accent-bg: #f4f1ee;
+            --footer-bg: #f5f5f5;
+            --white: #ffffff;
+            --wa-color: #25d366;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: var(--font-sans); color: var(--secondary-color); background-color: var(--white); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- NAVBAR --- */
+        header { padding: 20px 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1000; border-bottom: 1px solid #eee; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 0.9rem; color: #666; }
+
+        /* --- ARTICLE HEADER --- */
+        .article-header { padding: 60px 0 40px; text-align: center; }
+        .category-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #999; display: block; margin-bottom: 15px; }
+        .article-header h1 { font-family: var(--font-serif); font-size: 3rem; line-height: 1.2; color: var(--primary-color); margin-bottom: 20px; }
+        
+        /* --- IMAGE & CAPTION --- */
+        .article-img-container { margin: 40px 0; text-align: center; }
+        .article-img-container img { width: 100%; border-radius: 4px; }
+        .img-caption { font-size: 0.8rem; color: #888; margin-top: 10px; font-style: italic; }
+
+        /* --- TABLE OF CONTENT (TOC) --- */
+        .toc-box { background: var(--accent-bg); padding: 20px; margin: 30px 0; border-radius: 4px; }
+        .toc-title { font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; }
+        .toc-title::after { content: '▼'; font-size: 0.7rem; transition: 0.3s; }
+        .toc-box.open .toc-title::after { transform: rotate(180deg); }
+        .toc-menu { display: none; margin-top: 15px; border-top: 1px solid #ddd; padding-top: 10px; }
+        .toc-box.open .toc-menu { display: block; }
+        .toc-menu li { list-style: decimal inside; margin-bottom: 8px; font-size: 0.9rem; }
+        .toc-menu a:hover { text-decoration: underline; }
+
+        /* --- CONTENT ELEMENTS --- */
+        .article-content h2 { font-family: var(--font-serif); font-size: 1.8rem; margin: 40px 0 20px; color: var(--primary-color); }
+        .article-content p { margin-bottom: 25px; font-size: 1.05rem; }
+        
+        blockquote { border-left: 4px solid var(--primary-color); padding-left: 30px; margin: 40px 0; font-family: var(--font-serif); font-size: 1.4rem; font-style: italic; color: var(--primary-color); }
+
+        .baca-juga { background: #f9f9f9; border-left: 4px solid #333; padding: 15px 20px; margin: 30px 0; }
+        .baca-juga strong { font-size: 0.9rem; text-transform: uppercase; display: block; margin-bottom: 5px; }
+
+        /* --- FAQ --- */
+        .faq-section { margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px; }
+        details { margin-bottom: 15px; background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 4px; }
+        summary { font-weight: 600; cursor: pointer; outline: none; }
+
+        /* --- AUTHOR PROFILE --- */
+        .author-card { display: flex; align-items: center; gap: 20px; padding: 30px; background: var(--accent-bg); margin-top: 50px; border-radius: 4px; }
+        .author-img { width: 80px; height: 80px; border-radius: 50%; background: #ddd; object-fit: cover; }
+        .author-info h4 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 5px; }
+        .author-info p { font-size: 0.85rem; color: #666; margin: 0; }
+
+        /* --- SHARE SOCIAL --- */
+        .share-links { margin: 40px 0; text-align: center; }
+        .share-links p { font-size: 0.8rem; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; }
+        .share-btn { display: inline-flex; width: 40px; height: 40px; background: #eee; align-items: center; justify-content: center; border-radius: 50%; margin: 0 5px; transition: 0.3s; }
+        .share-btn:hover { background: var(--primary-color); color: white; }
+
+        /* --- RELATED ARTICLES --- */
+        .related-section { padding: 60px 0; background: #fcfcfc; border-top: 1px solid #eee; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 30px; }
+        .related-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+        .related-card h4 { font-size: 0.95rem; margin-top: 10px; font-family: var(--font-serif); }
+
+        /* --- FLOATING BUTTONS --- */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: var(--wa-color); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000; }
+        .back-to-top { position: fixed; bottom: 85px; right: 20px; background: #fff; border: 1px solid #ddd; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; visibility: hidden; opacity: 0; transition: 0.3s; z-index: 1000;}
+        .back-to-top.show { visibility: visible; opacity: 1; }
+
+        /* --- FOOTER (ABU-ABU) --- */
+        footer { padding: 60px 0 30px; background: var(--footer-bg); border-top: 1px solid #eee; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;}
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 2rem; }
+            .related-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+        /* =========================================================
+   MOBILE STABILITY & CLS FIX
+   ========================================================= */
+
+/* --- GLOBAL MOBILE STABILITY --- */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* --- RESPONSIVE TITLE (ANTI FONT JUMP) --- */
+.article-header h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
+/* --- IMAGE CLS FIX (LOCK HEIGHT) --- */
+.article-img-container {
+    aspect-ratio: 2 / 1; /* 1200x600 */
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+.article-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- TOC SMOOTH OPEN (NO PUSH JUMP) --- */
+.toc-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.toc-box.open .toc-menu {
+    max-height: 300px;
+}
+
+/* --- FLOATING BUTTONS (ANTI RESIZE JITTER) --- */
+.wa-float,
+.back-to-top {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* --- iOS SAFE AREA FIX --- */
+@supports (-webkit-touch-callout: none) {
+    .wa-float {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+    .back-to-top {
+        bottom: calc(85px + env(safe-area-inset-bottom));
+    }
+}
+
+/* --- RELATED GRID MOBILE FIX --- */
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-header {
+        padding-top: 40px;
+    }
+
+    .author-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="container navbar">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <div class="logo">SCENT STORE</div>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Shops</a></li>
+                <li><a href="#">The Process</a></li>
+                <li><a href="#">Packaging</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* DEFAULT (DESKTOP) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+    }
+}
+
+</style>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+   <main class="container">
+    <article class="article-header">
+        <span class="category-tag">Sustainability</span>
+        <h1>For Best Results Work</h1>
+        <p style="color: #999; font-size: 0.9rem;">
+            Diterbitkan pada 22 Januari 2026 • 5 Menit Baca
+        </p>
+    </article>
+
+    <div class="article-img-container">
+        <img src="https://placehold.co/1200x600/333/fff?text=Plant+Essential+Oils" alt="Botanic Image">
+        <p class="img-caption">
+            Gambar 1: Ekstraksi minyak esensial murni langsung dari kelopak bunga Lavender.
+        </p>
+    </div>
+
+    <div class="toc-box" id="tocBox">
+        <div class="toc-title" onclick="toggleTOC()">Daftar Isi</div>
+        <ul class="toc-menu">
+            <li><a href="#intro">Mengapa Memilih Bahan Alami?</a></li>
+            <li><a href="#benefits">Manfaat untuk Kulit Sensitive</a></li>
+            <li><a href="#process">Proses Distilasi Dingin</a></li>
+            <li><a href="#faq">Pertanyaan Umum (FAQ)</a></li>
+        </ul>
+    </div>
+
+    <div class="article-content">
+        <p id="intro">
+            Memilih wewangian bukan hanya tentang aroma yang enak, tetapi juga tentang bagaimana
+            bahan-bahan tersebut berinteraksi dengan tubuh Anda. Di Essentia, kami memprioritaskan
+            penggunaan <strong>plant-based essential oils</strong> dibandingkan bahan sintetis.
+        </p>
+
+        <div class="baca-juga">
+            <strong>Baca Juga:</strong>
+            <a href="#">5 Cara Membuat Aroma Parfum Bertahan Lebih Lama</a>
+        </div>
+
+        <h2 id="benefits">Manfaat untuk Kulit Sensitive</h2>
+        <p>
+            Minyak nabati mengandung senyawa alami yang tidak hanya memberikan aroma, tetapi juga nutrisi.
+            Berbeda dengan pewangi berbasis alkohol keras, minyak esensial seperti Jojoba atau Bergamot
+            cenderung lebih ramah bagi mereka yang memiliki kulit sensitif.
+        </p>
+
+        <blockquote>
+            "Aroma adalah bentuk paling kuat dari ingatan, dan alam adalah pembuat parfum terbaik di dunia."
+        </blockquote>
+
+        <div class="article-img-container">
+            <img src="https://placehold.co/1200x600/f4f1ee/333?text=Handmade+Process" alt="Process Image">
+            <p class="img-caption">
+                Gambar 2: Proses pencampuran tangan (hand-blended) di studio Los Angeles kami.
+            </p>
+        </div>
+
+        <h2 id="process">Proses Distilasi Dingin</h2>
+        <p>
+            Kami menggunakan metode distilasi uap suhu rendah untuk memastikan molekul aromatik tidak rusak.
+            Ini memastikan bahwa botol yang Anda terima mengandung esensi murni dari alam tanpa kontaminasi
+            kimiawi.
+        </p>
+    </div>
+
+    <div class="faq-section" id="faq">
+        <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Pertanyaan Umum</h2>
+
+        <details>
+            <summary>Apakah minyak esensial aman untuk bayi?</summary>
+            <p>
+                Kami menyarankan penggunaan terbatas untuk bayi. Sebaiknya konsultasikan dengan dokter
+                sebelum penggunaan pada balita.
+            </p>
+        </details>
+
+        <details>
+            <summary>Berapa lama aroma plant-based bertahan?</summary>
+            <p>
+                Biasanya bertahan 4–6 jam tergantung pada jenis aroma dan kelembapan kulit Anda.
+            </p>
+        </details>
+    </div>
+
+        <div class="author-card">
+            <img src="https://placehold.co/100x100/333/fff?text=Author" alt="Penulis" class="author-img">
+            <div class="author-info">
+                <h4>Sarah Jenkins</h4>
+                <p>Master Perfumer & Botanical Researcher dengan pengalaman lebih dari 15 tahun dalam pengembangan wewangian alami.</p>
+            </div>
+        </div>
+
+        <div class="share-links">
+            <p>Bagikan Artikel Ini</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=link-artikel-anda" class="share-btn" target="_blank">FB</a>
+            <a href="https://twitter.com/intent/tweet?url=link-artikel-anda&text=Baca artikel menarik ini!" class="share-btn" target="_blank">TW</a>
+            <a href="https://api.whatsapp.com/send?text=Baca artikel ini: link-artikel-anda" class="share-btn" target="_blank">WA</a>
+        </div>
+    </main>
+
+    <section class="related-section">
+        <div class="container" style="max-width: 1000px;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem;">Artikel Terkait</h3>
+            <div class="related-grid">
+                <a href="#" class="related-card">
+                    <img src="https://placehold.co/400x300/eee/333?text=Blog+1" alt="Related">
+                    <h4>Mengenal Sourcing Bahan Organik Kami</h4>
+                </a>
+                <a href="#" class="related-card">
+                    <img src="https://placehold.co/400x300/eee/333?text=Blog+2" alt="Related">
+                    <h4>Tips Re-use Botol Kaca Amber</h4>
+                </a>
+                <a href="#" class="related-card">
+                    <img src="https://placehold.co/400x300/eee/333?text=Blog+3" alt="Related">
+                    <h4>Aroma Terbaik untuk Meditasi</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">SCENT STORE</div>
+                <p style="font-size: 0.85rem; color: #777;">Modern look for your personal scent mood.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="font-size: 0.9rem; margin-bottom: 20px;">Quick Links</h4>
+                <ul style="font-size: 0.85rem; color: #666; line-height: 2;">
+                    <li><a href="produk.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="font-size: 0.9rem; margin-bottom: 20px;">Contact</h4>
+                <p style="font-size: 0.85rem; color: #666;">hello@scentstore.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 0.75rem; color: #aaa; border-top: 1px solid #ddd; padding-top: 20px;">
+            &copy; 2026 Scent Store. All Rights Reserved.
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="scrollTopBtn">↑</button>
+    <a href="https://wa.me/628123456789" class="wa-float" target="_blank">
+        <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.203 0-4.007 1.77-4.037 3.937-.013.869.254 1.727.774 2.43l-.473 1.731 1.773-.466c.662.359 1.408.549 2.164.549h.017c2.203 0 4.006-1.771 4.037-3.938.015-.869-.254-1.727-.774-2.43s-1.251-1.157-2.08-1.294c-.454-.075-.92-.119-1.39-.119zM9.548 8.822c.119-.015.242-.015.353.111.112.126.381.928.414 1.002.033.074.055.161-.002.264-.055.104-.085.166-.171.264-.085.097-.181.218-.259.294-.092.091-.188.191-.081.374.107.183.477.787.822 1.096.444.398.78.522.973.618.193.096.305.081.42-.048.114-.129.493-.574.626-.77.133-.196.266-.166.448-.096.182.071 1.154.544 1.354.643.2.1.332.15.38.232.048.083.048.479-.148.86-.196.381-.971.558-1.339.574-.368.015-.716-.057-1.16-.231-1.923-.767-3.136-2.731-3.232-2.859-.096-.129-.781-1.04-.781-1.983 0-.943.493-1.403.668-1.594.174-.191.381-.239.507-.253z"/></svg>
+    </a>
+
+    <script>
+        // Toggle Daftar Isi
+        function toggleTOC() {
+            document.getElementById('tocBox').classList.toggle('open');
+        }
+
+        // Scroll Top Logic
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.classList.add("show");
+            } else {
+                scrollTopBtn.classList.remove("show");
+            }
+        };
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+
+</body>
+</html>
